@@ -35,10 +35,12 @@
                     <nav>
                         <ul v-if="todos.length > 0">
                             <li class="to-do" v-for="todo in todos">
-                                {{todo.text}}
+                                <div class="text" :class="{ taskDone : todo.isDone }">
+                                    {{todo.text}}
+                                </div>
                                 <div class="icon">
-                                    <i class="fa-solid fa-check" @click="checkTodo()"></i>
-                                    <i class="fa-solid fa-xmark" @click="removeTodo()"></i>
+                                    <i class="fa-solid fa-check" @click="checkTodo ()"></i>
+                                    <i class="fa-solid fa-xmark" @click="removeTodo ()"></i>
                                 </div>
                             </li>
                         </ul>
@@ -56,13 +58,13 @@
 <!-- traccia dell'esercizio:
     MILESTONE 1
     Stampare all'interno di una lista, un item per ogni todo
-    Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato
+    Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato (QUASI FATTO)
 
     MILESTONE 2
-    Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa, il todo viene rimosso dalla lista
+    Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa, il todo viene rimosso dalla lista (FATTO)
 
     MILESTONE 3
-    Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul pulsante, il testo digitato viene letto e utilizzato per creare un nuovo todo, che quindi viene aggiunto alla lista dei todo esistenti
+    Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul pulsante, il testo digitato viene letto e utilizzato per creare un nuovo todo, che quindi viene aggiunto alla lista dei todo esistenti (QUASI FATTO)
 -->
 
 <!-- bonus: 

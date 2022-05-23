@@ -30,13 +30,8 @@ const app = new Vue ({
         removeTodo (index) {
             this.todos.splice (index, 1);
         },
-        checkTodo () {
-            this.classList.add("task-done");
-        },
         addTodo () {
-            if (this.newTodo === "" && this.newTodo !== " ") {
-                this.todos.text.push(this.newTodo);
-            }
+            todo.text.push(this.newTodo);
         }
     },
 });
