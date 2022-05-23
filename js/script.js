@@ -30,8 +30,16 @@ const app = new Vue ({
         removeTodo (index) {
             this.todos.splice (index, 1);
         },
+        checkTodo() {
+            if (this.todos.todo.isDone === false) {
+                this.todos.todo.isDone = true;
+            }
+        },
         addTodo () {
-            todo.text.push(this.newTodo);
+            if (this.newTodo !== " ") {
+                this.todos.todo.push(this.newTodo);
+                this.newTodo = ""
+            }
         }
     },
 });
