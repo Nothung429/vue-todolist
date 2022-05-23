@@ -37,8 +37,8 @@ const app = new Vue ({
         },
         addTodo () {
             if (this.newTodo !== " ") {
-                this.todos.todo.push(this.newTodo);
-                this.newTodo = ""
+                todo = {text: this.newTodo , isDone: false} 
+                this.todos.push(todo);
             }
         }
     },
