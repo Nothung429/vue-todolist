@@ -56,5 +56,5 @@ h1 {
     cursor: pointer;
 }
 .task-done {
-    text-decoration: line-through;
+    color: green;
 }
