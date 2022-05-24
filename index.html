@@ -39,7 +39,7 @@
                                     {{todo.text}}
                                 </div>
                                 <div class="icon">
-                                    <i class="fa-solid fa-check" @click="checkTodo()"></i>
+                                    <i class="fa-solid fa-check" @click="todo.isDone = !todo.isDone"></i>
                                     <i class="fa-solid fa-xmark" @click="removeTodo()"></i>
                                 </div>
                             </li>
